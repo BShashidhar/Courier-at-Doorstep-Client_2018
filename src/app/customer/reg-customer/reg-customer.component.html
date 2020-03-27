@@ -1,0 +1,19 @@
+<form (ngSubmit)="saveCustomer()">
+  <div class="form-group">
+    <label for="Name">Customer Name :</label>
+    <input type="text" class="form-control" name="cname" placeholder="Customer Name" [(ngModel)]="customer.name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="cemail" placeholder="Email" [(ngModel)]="customer.email">
+  </div>
+  <div class="form-group">
+    <label for="email">Password :</label>
+    <input type="password" class="form-control" name="cpass" placeholder="Password Min 6" [(ngModel)]="customer.passwrod">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Mobile Number:</label>
+    <input type="number" class="form-control" name="cmono" placeholder="Mobile Number" [(ngModel)]="customer.phoneno">
+  </div>
+  <button type="submit" class="btn btn-primary" >Register</button>
+</form>

@@ -1,0 +1,5 @@
+<header *ngIf="router.url !== '/myadminiskrst'"></header>
+<app-body *ngIf="router.url === '/'"></app-body>
+<app-nav-bar-events *ngIf="router.url !== '/myadminiskrst'"></app-nav-bar-events>
+<app-footer *ngIf="router.url !== '/myadminiskrst'"></app-footer>
+<app-admin *ngIf="router.url === '/myadminiskrst'"></app-admin>

@@ -1,0 +1,219 @@
+<!-- Nav bar (Header) -->
+<nav>
+  <div class="nav-wrapper">
+    <p class="brand-logo center">WELCOME ADMIN</p>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a id="navbar-link" href="http://localhost:4200">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Nav bar ends here -->
+
+<br>
+<br>
+<br>
+<br>
+<div class="center" style="margin-left:100px;margin-right:100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-content">
+                <strong>Get all providers...</strong>
+                <br>
+                <p>You the admin of all of them. You are having certain privileges listed below. If you found any provider fraud
+                  then you can perform certain action.</p>
+                <strong>Actions can be performed on provider's services</strong>
+                <ul class="list-group">
+                  <li class="list-group-item">View</li>
+                  <li class="list-group-item">Delete</li>
+                </ul>
+                <div class="form-group">
+                  <input type="button" value="Get Providers" (click)="getProviders()" class="btn btn-primary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-content">
+                <strong>Get services...</strong>
+                <br>
+                <br>
+                <form autocomplete="off" (ngSubmit)="searchServiceByScid()">
+                  <div class="form-group">
+                    <select class="form-control" (change)="onSelectCat($event.target.value)">
+                      <option value="" disabled selected>Choose Category</option>
+                      <option value="{{cat.cid}}" *ngFor="let cat of cats">{{cat.name}}</option>
+                    </select>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <select class="form-control" (change)="onSelectSubCat($event.target.value)">
+                      <option value="" disabled selected>Choose Sub Category</option>
+                      <option value="{{subcat.scid}}" *ngFor="let subcat of subcats">{{subcat.name}}</option>
+                    </select>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input type="submit" value="Get Services" class="btn btn-primary">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<br>
+
+<!-- Service Table -->
+<div class="center" *ngIf="status" style="margin-left:100px;margin-right:100px;">
+  <table class="table table-striped">
+    <thead>
+      <th>ServiceID</th>
+      <th>ServiceName</th>
+      <th>ServiceDescription</th>
+      <th>ServiceAddress</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let services of service">
+        <td>{{services.id}}</td>
+        <td>{{services.name}}</td>
+        <td>{{services.description}}</td>
+        <td>{{services.address}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="details(services)" style="width:100px;">View</button>
+          <button class="btn btn-danger" (click)="delete(services)" style="width:100px;">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- /Service Table -->
+
+<!-- Provider Table -->
+
+
+<div class="center" *ngIf="pstatus" style="margin-left:100px;margin-right:100px;">
+  <table class="table table-striped">
+    <thead>
+      <th>ProviderID</th>
+      <th>ProviderName</th>
+      <th>ProviderEmail</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pr of provider">
+        <td>{{pr.pid}}</td>
+        <td>{{pr.name}}</td>
+        <td>{{pr.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- /Provider Table -->
+
+
+<br>
+<br>
+<!-- Details of Service -->
+<div class="container" *ngIf="flag=='details'">
+  <div class="row">
+    <div class="col s12 m12">
+      <table class="striped">
+        <tbody>
+          <tr>
+            <td>Service Name : </td>
+            <td>{{myservice.name}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>City :</td>
+            <td>{{myservice.city}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Address</td>
+            <td>{{myservice.address}}</td>
+          </tr>
+          <br>
+          <!--<tr>
+            <td>Image 1</td>
+            <td>{{myservice.image1}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Image 2</td>
+            <td>{{myservice.image2}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Image 3</td>
+            <td>{{myservice.image2}}</td>
+          </tr>
+          <br>-->
+          <tr>
+            <td>Description</td>
+            <td>{{myservice.description}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Price of Delivery</td>
+            <td>{{myservice.priceA}}</td>
+          </tr>
+          <br>
+          <!--<tr>
+            <td>Price (Child)</td>
+            <td>{{myservice.priceC}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Peak Time </td>
+            <td>{{myservice.peaktime}}</td>
+          </tr>
+          <br>-->
+          <tr>
+            <td>Timing</td>
+            <td>{{myservice.timing}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Details of Service -->
+
+
+
+<br>
+<br>
+<!-- footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">Your are having privilege to delete services or providers....</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright Text
+    </div>
+  </div>
+</footer>

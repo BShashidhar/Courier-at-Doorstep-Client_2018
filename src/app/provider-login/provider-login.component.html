@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="center">Please do login to avail services you have.....</h2><br>
+  <div class="row">
+    <div class="col s6 offset-s3 z-depth-1">
+      <h3 id="title">Login Form</h3>
+      <form (ngSubmit)="loginProvider()">
+        <input type="text" name="uname" placeholder="User Name" [(ngModel)]='provider.email' class="myfontsize">
+        <input type="password" name="pass" placeholder="Password" [(ngModel)]='provider.password' class="myfontsize">
+        <br>
+        <input type="button" value="Login" class="btn btn-primary" (click)="loginProvider()">
+        <input type="button" value="Register" class="btn btn-success" (click)="regProvider()">
+        <br>
+      </form>
+    </div>
+  </div>
+</div>

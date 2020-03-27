@@ -1,0 +1,11 @@
+.form-group{
+    width: 800px;
+    margin-left: 200px;
+}
+.btn{
+    margin-left: 500px;
+    width: 100px;
+}
+.form-control, .btn{
+    border-radius: 0%;
+}

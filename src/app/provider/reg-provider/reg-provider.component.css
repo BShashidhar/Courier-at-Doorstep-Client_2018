@@ -1,0 +1,14 @@
+.form-group{
+    width: 800px;
+    margin-left: 200px;
+    font-size: 1.0em;
+}
+.btn{
+    margin-left: 500px;
+    width: 100px;
+}
+.form-control, .btn{
+    border-radius: 0%;
+    font-size: 1.2em;
+    padding-left: 10px;
+}

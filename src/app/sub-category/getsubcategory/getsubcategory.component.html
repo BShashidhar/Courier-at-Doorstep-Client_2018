@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+      <label for="Name">Sub-Category Name :</label>
+      <input type="text" class="form-control" name="scname" placeholder="Sub Category Name" [(ngModel)]="subcategory.name" readonly>
+    </div>
+    <div class="form-group">
+      <label for="email">Sub-Category Image:</label>
+      <input type="email" class="form-control" name="scimage" placeholder="Image" [(ngModel)]="subcategory.image" readonly>
+    </div>
+    <div class="form-group">
+      <label for="email">Description :</label>
+      <input type="text" class="form-control" name="scdesc" placeholder="Description" [(ngModel)]="subcategory.description" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary" >Register</button>
+  </form>

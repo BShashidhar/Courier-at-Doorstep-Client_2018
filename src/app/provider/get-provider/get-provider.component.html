@@ -1,0 +1,110 @@
+<div class="container">
+  <br>
+  <div class="jumbotron p-3 text-center">
+    Provider Name :
+    <h4 class="display-4">{{provider.name}}({{provider.email}})</h4>
+    <hr>
+    <p class="lead">Your "
+      <strong>Services"</strong> are listed below</p>
+    <br>
+    <button class="btn btn-raised btn-success" (click)="saveService()">
+      <span class="fa fa-audio-description" aria-hidden="true">&nbsp;&nbsp;New Service</span>
+    </button>
+    <button class="btn btn-raised btn-primary" (click)="logout()">
+      <span aria-hidden="true">&nbsp;&nbsp;Sign Out</span>
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let service of servicelist">
+      <div class="card">
+        <h4 class="card-header bg-dark text-white center">{{service.name}}
+        </h4>
+        <div class="float-right small center" style="margin-left:5px;">
+          <button class="btn btn-raised btn-success" (click)="details(service)">
+            <span class="fa fa-eye" aria-hidden="true">&nbsp;&nbsp;Details</span>
+          </button>
+          <button class="btn btn-raised btn-danger">
+            <span class="fa fa-trash" aria-hidden="true" (click)="delete(service)">&nbsp;&nbsp;Delete</span>
+          </button>
+          <button class="btn btn-raised btn-info" (click)="update(service)">
+            <span class="fa fa-edit" aria-hidden="true">&nbsp;&nbsp;Edit</span>
+          </button>
+        </div>
+        <br>
+        <div class="card-body">
+          <div class="image float-left user-l">
+            <img src="./../assets/images/service.jpg" class="img-thumbnail" alt="avatar" />
+          </div>
+          <h4 class="card-title">Special title treatment</h4>
+          <p class="card-text center">{{service.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- jQuery first, then Bootstrap JS. -->
+<div class="container" *ngIf="flag=='details'">
+  <div class="row">
+    <div class="col s12 m12">
+      <table class="striped">
+        <tbody>
+          <tr>
+            <td>Service Name : </td>
+            <td>{{service.name}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>City :</td>
+            <td>{{service.city}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Address</td>
+            <td>{{service.address}}</td>
+          </tr>
+          <br>
+          <!--<tr>
+            <td>Image 1</td>
+            <td>{{service.image1}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Image 2</td>
+            <td>{{service.image2}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Image 3</td>
+            <td>{{service.image2}}</td>
+          </tr>
+          <br>-->
+          <tr>
+            <td>Description</td>
+            <td>{{service.description}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Price for Delivery</td>
+            <td>{{service.priceA}}</td>
+          </tr>
+          <br>
+          <!--<tr>
+            <td>Price (Child)</td>
+            <td>{{service.priceC}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>Peak Time </td>
+            <td>{{service.peaktime}}</td>
+          </tr>
+          <br>-->
+          <tr>
+            <td>Timing</td>
+            <td>{{service.timing}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

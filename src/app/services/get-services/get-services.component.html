@@ -1,0 +1,49 @@
+<form>
+    <div class="form-group">
+        <label for="Name">Service Name :</label>
+        <input type="text" class="form-control" readonly name="sname" placeholder="Service Name" [(ngModel)]="service.name">
+    </div>
+    <div class="form-group">
+        <label for="Name">City :</label>
+        <input type="text" class="form-control" readonly name="scity" placeholder="City" [(ngModel)]="service.city">
+    </div>
+    <div class="form-group">
+        <label for="Name">Address :</label>
+        <input type="text" class="form-control" readonly name="saddress" placeholder="Address" [(ngModel)]="service.address">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Image 1 :</label>
+        <input type="text" class="form-control" readonly name="simage" placeholder="Image" [(ngModel)]="service.image1">
+    </div>
+    <div class="form-group">
+        <label for="Name">Image 2 :</label>
+        <input type="text" class="form-control" readonly name="simag2" placeholder="image2" [(ngModel)]="service.image2">
+    </div>
+    <div class="form-group">
+        <label for="Name">Image 3 :</label>
+        <input type="text" class="form-control" readonly name="simage3" placeholder="image3" [(ngModel)]="service.image3">
+    </div>-->
+    <div class="form-group">
+        <label for="Name">Description :</label>
+        <input type="text" class="form-control" readonly name="sdesc" placeholder="Description" [(ngModel)]="service.description">
+    </div>
+    <div class="form-group">
+        <label for="Name">Timing :</label>
+        <input type="text" class="form-control" readonly name="stiming" placeholder="Timing" [(ngModel)]="service.timing">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Peak Time :</label>
+        <input type="text" class="form-control" readonly name="speaktime" placeholder="Peak Time" [(ngModel)]="service.peaktime">
+    </div>-->
+    <div class="form-group">
+        <label for="Name">Price for Delivery :</label>
+        <input type="number" class="form-control" readonly name="spriceA" placeholder="Price for Delivery" [(ngModel)]="service.priceA">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Price (Child) :</label>
+        <input type="number" class="form-control" readonly name="spriceC" placeholder="Price Child" [(ngModel)]="service.priceC">
+    </div>-->
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" value="Book Now" (click)="bookNow()">
+    </div>
+</form>

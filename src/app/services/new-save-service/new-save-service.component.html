@@ -1,0 +1,72 @@
+<form (ngSubmit)="saveService()">
+    <div class="form-group">
+        <label for="Name">Category :</label>
+        <select class="form-control" (change)="onSelectCat($event.target.value)">
+            <option value="" disabled selected>Choose Category</option>
+            <option value="{{cat.cid}}" *ngFor="let cat of cats">{{cat.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Name">SubCategory :</label>
+        <select class="form-control" (change)="onSelectSubCat($event.target.value)">
+            <option value="" disabled selected>Choose Sub Category</option>
+            <option value="{{subcat.scid}}" *ngFor="let subcat of subcats">{{subcat.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Name">Service Name :</label>
+        <input type="text" class="form-control" name="sname" placeholder="Service Name" [(ngModel)]="service.name">
+    </div>
+    <div class="form-group">
+        <label for="Name">City :</label>
+        <input type="text" class="form-control" name="scity" placeholder="City" [(ngModel)]="service.city">
+    </div>
+    <div class="form-group">
+        <label for="Name">Address :</label>
+        <input type="text" class="form-control" name="saddress" placeholder="Address" [(ngModel)]="service.address">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Image 1 :</label>
+        <input type="text" class="form-control" name="simage" placeholder="Image" [(ngModel)]="service.image1">
+    </div>
+    <div class="form-group">
+        <label for="Name">Image 2 :</label>
+        <input type="text" class="form-control" name="simag2" placeholder="image2" [(ngModel)]="service.image2">
+    </div>
+    <div class="form-group">
+        <label for="Name">Image 3 :</label>
+        <input type="text" class="form-control" name="simage3" placeholder="image3" [(ngModel)]="service.image3">
+    </div>-->
+    <div class="form-group">
+        <label for="Name">Description :</label>
+        <input type="text" class="form-control" name="sdesc" placeholder="Description" [(ngModel)]="service.description">
+    </div>
+    <div class="form-group">
+        <label for="Name">Timing :</label>
+        <input type="text" class="form-control" name="stiming" placeholder="Timing" [(ngModel)]="service.timing">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Peak Time :</label>
+        <input type="text" class="form-control" name="speaktime" placeholder="Peak Time" [(ngModel)]="service.peaktime">
+    </div>-->
+    <div class="form-group">
+        <label for="Name">Price of Delivery:</label>
+        <input type="number" class="form-control" name="spriceA" placeholder="Price of Delivery" [(ngModel)]="service.priceA">
+    </div>
+    <!--<div class="form-group">
+        <label for="Name">Price (Child) :</label>
+        <input type="number" class="form-control" name="spriceC" placeholder="Price Child" [(ngModel)]="service.priceC">
+    </div>-->
+    <div class="form-group">
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="col s3">
+                <input type="submit" class="btn btn-success" style="width:150px;" value="Save">
+            </div>
+            <div class="col s3"></div>
+            <div class="col s3">
+                <input type="button" class="btn btn-cancel" (click)="cancel()" value="Cancel">
+            </div>
+        </div>
+    </div>
+</form>

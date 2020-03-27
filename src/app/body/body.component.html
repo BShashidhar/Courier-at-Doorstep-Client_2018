@@ -1,0 +1,95 @@
+<div id="overall">
+</div>
+<div class="header">
+  <a href="#" class="logo">Search City</a>
+
+  <!-- Search box -->
+
+  <form autocomplete="off" (ngSubmit)="searchService()">
+    <a href="#" class="search-icon-before" id="submit">
+      <img src="./../../assets/assets/search-ico1.png">
+    </a>
+    <input type="search" name="search" placeholder="From where your parcel has to pick up..." id="city" [(ngModel)]="searchString">
+    <a href="#" class="search-icon-after">
+      <img src="./../../assets/assets/search-ico2.png">
+      <label class="labelab" for="city"></label>
+    </a>
+    <a href="#" class="close">
+      <img src="./../../assets/assets/close-ico2.png">
+      <label class="labelab" for="city"></label>
+    </a>
+  </form>
+
+
+  <!-- /Search box -->
+
+  <a href="#"></a>
+  <ul class="navigation">
+    <li>
+      <a href="#">Delivery places</a>
+    </li>
+    <li>
+      <a href="#">Test</a>
+    </li>
+  </ul>
+</div>
+
+<div class="container_in">
+  <h1>I'm going
+    <br class="mobile-break">on a delivery!</h1>
+  <h2 class="whatever">
+    Find essential information
+    <br class="mobile-break"> for your next Delivery
+  </h2>
+</div>
+<br>
+<br>
+
+<div class="center" style="margin-left:100px;margin-right:100px;">
+  <form autocomplete="off" (ngSubmit)="searchServiceByScid()">
+    <div class="form-group">
+      <select class="form-control" (change)="onSelectCat($event.target.value)">
+        <option value="" disabled selected>Choose Category</option>
+        <option value="{{cat.cid}}" *ngFor="let cat of cats">{{cat.name}}</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group">
+      <select class="form-control" (change)="onSelectSubCat($event.target.value)">
+        <option value="" disabled selected>Choose Sub Category</option>
+        <option value="{{subcat.scid}}" *ngFor="let subcat of subcats">{{subcat.name}}</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary">
+      </div>
+  </form>
+  <br><br><br>
+  <br><br><br>
+</div>
+<br><br><br>
+<div class="center" *ngIf="status" style="margin-left:100px;margin-right:100px;">
+  <table class="table table-striped">
+    <thead>
+      <th>ServiceID</th>
+      <th>ServiceName</th>
+      <th>ServiceDescription</th>
+      <th>ServiceAddress</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let services of service">
+        <td>{{services.id}}</td>
+        <td>{{services.name}}</td>
+        <td>{{services.description}}</td>
+        <td>{{services.address}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="viewService(services)" style="width:50px;">view</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<br>

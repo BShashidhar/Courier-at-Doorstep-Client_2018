@@ -1,0 +1,26 @@
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <form (ngSubmit)="bookIt()">
+        <div class="form-group">
+          <input type="email" class="form-control" name="cemail" id="email" placeholder="Your Email ID" [(ngModel)]="book.cemail">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="noa" placeholder="Your Pickup Address" [(ngModel)]="noa">
+        </div>
+        <div class="form-group">
+          <input type="date" class="form-control" name="noc" placeholder="Enter the pick up Date" [(ngModel)]="nod">
+        </div>
+        <div class="form-group">
+          <input type="time" class="form-control" name="noc" placeholder="Enter the pick up Time" [(ngModel)]="noc">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>

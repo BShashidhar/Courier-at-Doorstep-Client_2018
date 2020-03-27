@@ -1,0 +1,18 @@
+.nav-wrapper{
+    background-color: #234770;
+}
+.brand-logo{
+    font-size: 2.5em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+#navbar-link{
+    margin-right: 20px;
+    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+.page-footer{
+    background-color: #234770;
+}
+.btn, .form-control{
+    border-radius: 0px;
+}

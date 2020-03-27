@@ -1,0 +1,758 @@
+    .btn{
+        border-radius: 0px;
+        width: 75px;
+    }
+    .form-control{
+        border-radius: 0px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* ------ Animations ------ */
+    
+    @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    
+    .fade-in {
+        opacity: 0;
+        -webkit-animation: fadeIn ease-in 1;
+        -moz-animation: fadeIn ease-in 1;
+        animation: fadeIn ease-in 1;
+        
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        
+        -webkit-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+    }
+    
+    .fade-in.one {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    }
+     
+    .fade-in.two {
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+    }
+     
+    .fade-in.three {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+    }
+    
+    .fade-in.four {
+    -webkit-animation-delay: 2.2s;
+    -moz-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+    }
+    
+    
+    
+    
+    
+    /* ------ */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                            input::-webkit-input-placeholder {
+                                                color: #000;
+                                                opacity: 0.6;
+                                            }
+                                            input:focus::-webkit-input-placeholder {
+                                                opacity: 0.4;
+                                            }
+                                            
+                                            /* Firefox < 19 */
+                                            input:-moz-placeholder {
+                                                color: #000;
+                                                opacity: 0.6;
+                                            }
+                                            input:focus:-moz-placeholder {
+                                                opacity: 0.4;
+                                            }
+                                            
+                                            /* Firefox > 19 */
+                                            input::-moz-placeholder {
+                                                color: #000;
+                                                opacity: 0.6;
+                                            }
+                                            input:focus::-moz-placeholder {
+                                                opacity: 0.4;
+                                            }
+                                            
+                                            /* Internet Explorer 10 */
+                                            input:-ms-input-placeholder {
+                                                color: #000;
+                                                opacity: 0.6;
+                                            }
+                                            input:focus:-ms-input-placeholder {
+                                                opacity: 0.4;
+                                            }
+    
+    
+    body {
+        font-family: 'Avenir Next', 'AvenirNextLTW01-Regular', 'Avenir Next W01 Light', Helvetica, sans-serif;
+        width: 100%;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    
+    div.header {
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .logo {
+        position: absolute;
+        left: 58px;
+        top: 50px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #18171f;
+    }
+    
+    ul.navigation {
+        position: absolute;
+        right: 48px;
+        top: 37px;
+        
+        display: none;
+        
+    }
+    
+    ul.navigation li {
+        display: inline;
+        font-size: 120%;
+    }
+    
+    ul.navigation li a {
+        display: block;
+        margin-left: 34px;
+        float: left;
+        padding: 10px;
+        color: #18171F;
+    }
+    
+    form {
+        width: 1060px;
+        margin: auto;
+        position: relative;
+    }
+    
+    #city {
+        margin-left: -14px;
+        margin-top: 37px;
+        border: 0;
+        -webkit-appearance: none;
+        font-size: 120%;
+        font-weight: 400;
+        font-family: 'Avenir Next', 'AvenirNextLTW01-Regular', 'Avenir Next W01 Light', Helvetica, sans-serif;
+        color: #18171F;
+        padding: 10px;
+        min-width: 500px;
+    }
+    
+    #city:focus {
+        outline-width: 0;
+    }
+    
+    a.search-icon-before {
+        top: 32px;
+        position: absolute;
+        padding: 11px 30px 7px 10px;
+        left: -108px;
+        border-right: 1px solid #f0f0f0;
+    }
+    
+    a.search-icon-before img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    a.search-icon-after {
+        display: none;
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    
+    
+        /*------ Typography ------*/
+        
+        h1 {
+            font-size: 270%;
+            font-weight: 400;
+            line-height: 200%;
+        }
+        
+        h2.whatever {
+            font-size: 270%;
+            font-weight: 400;
+            opacity: 0.3;
+        }
+        
+        h2.strip-headline {
+            font-size: 100%;
+            font-weight: 400;
+            color: #18171f;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: block;
+            width: 1060px;
+            margin: auto;
+            margin-bottom: 36px;
+        }
+        
+        
+        a {
+            text-decoration: none;
+        }
+        
+    
+        /* -- */
+        
+    
+    div.line {
+        width: 100%;
+        height: 1px;
+        background-color: #e8eaef;
+        clear: both;
+        opacity: 0.5;
+        margin-bottom: 104px;
+    }
+    
+    
+    hr.mrproper {
+        clear: both;
+        visibility: hidden;
+        margin-bottom: 30px;
+    }
+    
+    br.mobile-break {
+        display: none;
+    }
+    
+    
+    
+    
+    /* ------ Content ------ */
+    
+    div.container_in {
+        width: 1060px;
+        margin: auto;
+        margin-top: calc(48vh - 410px - 2vw);
+    }
+    
+    
+    
+    div.popular-destinations {
+        width: 100%;
+        position: absolute;
+        bottom: 46px;
+    }
+    
+    div.popular-destinations::-webkit-scrollbar {
+        display: none;
+    }
+    
+    div.cards-strip {
+        width: 100%;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 12px;
+    }
+    
+    div.cards-strip::-webkit-scrollbar {
+        display: none;
+    }
+    
+    div.cards-strip_in {
+        margin-left: 58px;
+        width: 4000px;
+    }
+    
+    
+    
+    div.cards-strip_in a:last-of-type {
+    }
+    
+    
+    
+    a.destination-card {
+        display: block;
+        background-color: #18171f;
+        float: left;
+        border-radius: 4px;
+        position: relative;
+        margin-right: 10px;
+        width: calc(9vw + 12vh - 2px);
+        min-width: 340px;
+        height: calc(26vh + 10vw);
+        min-height: 560px;
+        color: #fff;
+        
+        -webkit-transition: opacity 0.4s ease-out;
+        -moz-transition: opacity 0.4s ease-out;
+        -o-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+    }
+    
+    a.destination-card:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.15;
+        background-color: #18171f;
+        border-radius: 4px;
+    }
+    
+    a.destination-card:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        z-index: 2;
+        opacity: 0.7;
+        border-radius: 4px;
+        
+        background: -moz-linear-gradient(top, rgba(24,23,31,0) 0%, rgba(24,23,31,1) 88%, rgba(24,23,31,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(24,23,31,0) 0%,rgba(24,23,31,1) 88%,rgba(24,23,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(24,23,31,0) 0%,rgba(24,23,31,1) 88%,rgba(24,23,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0018171f', endColorstr='#18171f',GradientType=0 );
+    }
+    
+    a.destination-card:hover {
+        opacity: 0.85;
+    }
+    
+    .card-place-category {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 90%;
+        z-index: 3;
+    }
+    
+    .card-description {
+        position: absolute;
+        left: 50px;
+        bottom: 44px;
+        z-index: 3;
+    }
+    
+    h3.place-name {
+        font-size: 160%;
+        font-weight: 400;
+        margin-bottom: 7px;
+    }
+    
+    p.place-tagline {
+        font-size: 110%;
+        opacity: 0.8;
+    }
+    
+    
+    
+    
+    a.last {
+        display: block;
+        background-color: #fff;
+        width: 58px;
+        min-width: 58px;
+        float: left;
+        height: calc(26vh + 10vw);
+        min-height: 560px;
+    }
+    
+    
+    
+                        /* ------ cards ------ */
+                        
+                        .iceland {
+                            background: url('./../../assets/countries/iceland/main.jpg') center center no-repeat;
+                        }
+                        
+                        .sanfrancisco {
+                            background: url('./../../assets/cities/scuba/compressedscuba.jpg') center center no-repeat;
+                        }
+                        
+                        .london {
+                            background: url('./../../assets/cities/rockclimbing/compressedrock.jpg') no-repeat;
+                        }
+                        
+                        .prague {
+                            background: url('./../../assets/cities/hillstation/compressedhill.jpg') no-repeat scroll;
+                        }
+                        
+                        .rome {
+                            background: url('./../../assets/cities/paragliding/compressedpara.jpg') center center no-repeat;
+                        }
+                        
+                        .budapest {
+                            background: url('./../../assets/cities/budapest/main.jpg') no-repeat scroll;
+                        }
+                        
+                        .paris {
+                            background: url('./../../assets/cities/paris/main.jpg') no-repeat;
+                        }
+                        
+                        .amsterdam {
+                            background: url('./../../assets/cities/waterworld/compressedwater.jpg') no-repeat scroll;
+                        }
+                        
+                        .hongkong {
+                            background: url('./../../assets/cities/hongkong/main.jpg') no-repeat scroll;
+                        }
+                        
+                        .singapore {
+                            background: url('./../../assets/cities/singapore/main.jpg') no-repeat scroll;
+                        }
+                        
+                        
+                        
+                        /* ---- */
+    
+    
+    
+    
+    @media (max-width: 1710px) {
+        
+        div.container_in {
+            width: 1060px;
+            margin-top: 0;
+        }
+        
+        
+        form {
+            width: auto;
+            margin-left: 25vw;
+            float: left;
+        }
+        
+        
+        div.popular-destinations {
+            position: relative;
+            padding-bottom: 50px;
+            bottom: 0;
+        }
+        
+        h1 {
+            font-size: 240%;
+            margin-top: 100px;
+        }
+        
+        h2.whatever {
+            font-size: 240%;
+        }
+        
+        hr.mrproper {
+            margin-bottom: 100px;
+        }
+        
+        
+        
+      
+      
+    }
+    
+    
+    
+    
+    @media (max-width: 1176px) {
+        
+        div.container_in {
+            width: 100%;
+        }
+        
+        .intro {
+            padding: 0px 58px;
+            width: auto;
+        }
+        
+        div.coordinates {
+            display: none;
+        }
+        
+        h1 {
+            padding-left: 58px;
+            font-size: 230%;
+            display: block;
+            width: 500px;
+        }
+        
+        h2.whatever {
+            font-size: 230%;
+        }
+        
+        h2 {
+            width: auto;
+            padding-left: 58px;
+        }
+        
+        h2.strip-headline {
+            width: auto;
+            margin-left: 58px;
+            padding-left: 0;
+        }
+        
+        form {
+            margin-left: 330px;
+            float: left;
+        }
+        
+        a.search-icon-before {
+            padding: 11px 30px 7px 10px;
+        }
+        
+        a.search-icon-before img {
+            width: 28px;
+            height: 28px;
+        }
+    
+    
+    
+    
+    
+    @media (max-width: 800px) {
+        
+        h1 {
+            font-size: 200%;
+        }
+        
+        h2.whatever {
+            font-size: 200%;
+        }
+        
+        
+    }
+    
+    
+    
+    @media (max-device-width: 415px) {
+        
+        .logo {
+            top: 28px;
+            left: 25px;
+            font-size: 80%;
+            z-index: 5;
+        }
+        
+        div.header {
+            background-color: #fff;
+            width: 100%;
+            height: 72px;
+            display: block;
+            float: none;
+        }
+        
+        form {
+            position: absolute;
+            top: 0px;
+            clear: both;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 4;
+            height: 54px;
+            margin-left: 0;
+        }
+        
+        #city {
+            position: fixed;
+            top: 15px;
+            left: 30px;
+            margin-top: 0;
+            font-size: 100%;
+            color: #18171F;
+            width: 86%;
+            background-color: #fff;
+            min-width: 0px;
+            display: none;
+        }
+        
+        #overall {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 3;
+            display: none;
+            opacity: 0;
+        }
+        
+        .labelab {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        a.search-icon-before {
+            display: none;
+        }
+        
+        a.search-icon-after, a.close {
+            position: absolute;
+            top: 14px;
+            right: 13px;
+            width: 20px;
+            height: 20px;
+            padding: 12px 12px 12px 12px;
+        }
+        
+        a.search-icon-after {
+            display: block;
+        }
+        
+        a.search-icon-after img, a.close img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        ul.navigation {
+            display: none;
+        }
+        
+        .search-icon {
+        }
+        
+        div.container_in {
+            margin-top: 0;
+        }
+        
+        
+        
+        h1 {
+            padding-left: 25px;
+            margin-top: 6px;
+            font-size: 144%;
+            line-height: 150%;
+            margin-bottom: 16px;
+            width: auto;
+        }
+        
+        h2.whatever {
+            padding-left: 25px;
+            font-size: 144%;
+            line-height: 150%;
+        }
+        
+        br.mobile-break {
+            display: inline;
+        }
+        
+        
+        
+        
+        /* ---- Content ---- */
+        
+        div.popular-destinations {
+            clear: both;
+            position: relative;
+            bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        a.destination-card {
+            width: 225px;
+            min-width: 225px;
+            height: 320px;
+            min-height: 320px;
+            background-size: cover;
+        }
+        
+        div.cards-strip {
+            padding-bottom: 25px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        div.cards-strip_in {
+            margin-left: 25px;
+        }
+        
+        a.last {
+            width: 25px;
+            min-width: 25px;
+            height: 320px;;
+            min-height: 320px;
+        }
+        
+        h2.strip-headline {
+            margin-left: 25px;
+            font-size: 70%;
+            margin-bottom: 18px;
+        }
+        
+        .card-place-category {
+            left: 25px;
+            top: 25px;
+            font-size: 60%;
+        }
+        
+        .card-description {
+            position: absolute;
+            left: 25px;
+            bottom: 20px;
+            z-index: 3;
+        }
+        
+        h3.place-name {
+            font-size: 100%;
+            font-weight: 400;
+            margin-bottom: 2px;
+        }
+        
+        p.place-tagline {
+            font-size: 74%;
+            opacity: 0.8;
+        }
+        
+        hr.mrproper {
+            margin-bottom: 34px;
+        }
+        
+        
+        
+        /* -- */
+    }    
+}

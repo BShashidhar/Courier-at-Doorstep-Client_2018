@@ -1,0 +1,19 @@
+<form (ngSubmit)="saveProvider()">
+  <div class="form-group">
+    <label for="Name">Provider Name :</label>
+    <input type="text" class="form-control" name="pname" placeholder="Provider Name" [(ngModel)]="provider.name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="pemail" placeholder="Email" [(ngModel)]="provider.email">
+  </div>
+  <div class="form-group">
+    <label for="email">Password :</label>
+    <input type="password" class="form-control" name="ppass" placeholder="Password Min 6" [(ngModel)]="provider.password">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Mobile Number:</label>
+    <input type="number" class="form-control" name="pmono" placeholder="Mobile Number" [(ngModel)]="provider.phoneno">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Register">
+</form>
